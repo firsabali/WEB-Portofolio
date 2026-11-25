@@ -1,0 +1,217 @@
+/* ==================================================
+   1. KEYFRAME ANIMATIONS
+   ================================================== */
+
+/* Animasi Spinner Loading Screen */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animasi Typing Cursor Blink */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Animasi Floating Background Shape (Hero Section) */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Animasi Foto Melayang Halus */
+@keyframes floatPhoto {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animasi Pulse untuk Micro-interaction */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ==================================================
+   2. UI ANIMATION CLASSES
+   ================================================== */
+
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-modal);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.loading-text {
+    font-size: var(--small-font);
+    color: var(--text-color-light);
+    letter-spacing: 2px;
+}
+
+/* Scroll Progress Bar Top */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    width: 0%;
+    z-index: calc(var(--z-header) + 1);
+    transition: width 0.1s ease-out;
+}
+
+/* Typing Cursor Class */
+.cursor {
+    display: inline-block;
+    background-color: var(--primary-color);
+    width: 2px;
+    animation: blink 0.7s infinite;
+}
+
+/* Background Abstract Shape (Hero) */
+.hero__abstract-bg {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(56, 189, 248, 0.15));
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 70%;
+    filter: blur(50px);
+    z-index: -1;
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Scroll Reveal Classes (Akan dipicu oleh JS IntersectionObserver) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Ripple Effect */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Progress Bar Smooth Fill Animation */
+.skills__percentage {
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 1rem;
+    display: block;
+    width: 0;
+    /* Awalnya 0%, akan diisi oleh JS/CSS transition */
+    transition: width 1.5s cubic-bezier(0.1, 0.42, 0.85, 1);
+}
+
+/* Back to Top Button */
+.scrollup {
+    position: fixed;
+    right: 2rem;
+    bottom: -20%;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-soft);
+    z-index: calc(var(--z-header) - 1);
+    transition: bottom 0.4s ease, background-color 0.3s ease;
+}
+
+.scrollup:hover {
+    background-color: var(--primary-hover);
+}
+
+.scrollup.show-scroll {
+    bottom: 3rem;
+}

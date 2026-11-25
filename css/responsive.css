@@ -1,0 +1,428 @@
+/* ==================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ================================================== */
+
+.nav__toggle {
+    display: none;
+}
+
+/* ==========================================
+   1. Laptop & Tablet (Max Width: 1024px)
+   ========================================== */
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .hero__img-box.slideshow-container {
+        width: 270px;
+        height: 340px;
+    }
+        .hero__img-box.slideshow-container {
+            max-width: 290px;
+            height: 310px;
+        }
+}
+
+/* ==========================================
+   2. Tablet & Ponsel (Max Width: 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    :root {
+        --h1-font: 1.65rem;
+        --h2-font: 1.4rem;
+        --h3-font: 1.05rem;
+        --normal-font: 0.9rem;
+        --small-font: 0.8rem;
+    }
+
+    /* --- MENU NAVIGASI SELULER --- */
+    .nav__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(37, 99, 235, 0.08);
+        cursor: pointer;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--glass-bg);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+        border-radius: 24px 0 0 24px;
+        padding: 5.5rem 2rem 2rem;
+        transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        border-left: 1px solid var(--border-color);
+        z-index: var(--z-header);
+    }
+
+    .nav__menu.show-menu {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+        font-weight: 500;
+        display: block;
+        padding: 0.4rem 0;
+    }
+
+    .nav__close {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: rgba(37, 99, 235, 0.08);
+        font-size: 1.25rem;
+        cursor: pointer;
+        color: var(--text-color);
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .nav__close:hover,
+    .nav__close:active {
+        color: #ffffff;
+        background-color: var(--primary-color);
+    }
+
+    /* --- HERO SECTION SELULER --- */
+    .hero {
+        padding-top: 5.5rem;
+    }
+
+    .hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero__img-box.slideshow-container {
+        width: 225px;
+        height: 285px;
+        border-radius: 20px;
+        margin: 0 auto;
+        order: -1;
+    }
+
+    .hero__img-box.slideshow-container .hero__img {
+        border-radius: 20px;
+    }
+
+    .hero__title {
+        font-size: 1.55rem !important;
+        line-height: 1.3 !important;
+        padding: 0 0.5rem;
+    }
+
+    .hero__profession {
+        font-size: 1.05rem;
+        min-height: 1.6rem;
+    }
+
+    .hero__description {
+        font-size: 0.88rem;
+        line-height: 1.65;
+        padding: 0 0.25rem;
+    }
+
+    .hero__buttons {
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .hero__buttons .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+        border-radius: 12px;
+    }
+
+    .hero__social {
+        justify-content: center;
+        gap: 0.85rem;
+    }
+
+    /* --- HIGHLIGHTS SECTION (GRID 2x2 RAPI DI HP) --- */
+    .highlights__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+    }
+
+    .highlight-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.25rem 0.85rem;
+        gap: 0.75rem;
+        border-radius: 18px;
+    }
+
+    .highlight-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+        border-radius: 14px;
+    }
+
+    .highlight-number {
+        font-size: 1.5rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .highlight-title {
+        font-size: 0.95rem;
+    }
+
+    .highlight-desc {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    /* --- TENTANG SAYA --- */
+    .about__description {
+        margin-bottom: 1.5rem !important;
+        text-align: left !important;
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    .about__grid-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about__card {
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    .about__card-title {
+        font-size: 1rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .about__card-desc {
+        text-align: left !important;
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .about__grid-container .about__card:last-child:nth-child(odd) {
+        width: 100%;
+    }
+
+    /* --- KEAHLIAN (SKILLS) --- */
+    .skills__container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .skills__content {
+        padding: 1.35rem 1rem !important;
+        border-radius: 18px;
+    }
+
+    .skills__grid-box {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.75rem;
+        padding: 0 !important;
+    }
+
+    .skill__item img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .skill__item i {
+        font-size: 1.85rem !important;
+    }
+
+    .skill__item span {
+        font-size: 0.72rem;
+        word-wrap: break-word;
+        display: block;
+    }
+
+    /* --- PROYEK --- */
+    .projects__container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .projects__card {
+        max-width: 100%;
+        border-radius: 18px;
+    }
+
+    .projects__content {
+        padding: 1.25rem;
+    }
+
+    .projects__title {
+        font-size: 1.05rem;
+        line-height: 1.4;
+    }
+
+    .projects__description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    /* --- DOKUMENTASI & GALERI --- */
+    .dokumentasi__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+    }
+
+    .dokumentasi__grid .dokumentasi__card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 0.425rem);
+    }
+
+    .dokumentasi__card {
+        padding: 0.65rem !important;
+        border-radius: 16px;
+    }
+
+    .dokumentasi__card .dokumentasi__img {
+        height: 130px;
+        border-radius: 12px;
+    }
+
+    .dokumentasi__title {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    .dokumentasi__date {
+        font-size: 0.65rem !important;
+    }
+
+    .gallery__img {
+        width: calc(50% - 0.425rem);
+        height: 115px;
+        border-radius: 12px;
+    }
+        .hero__img-box.slideshow-container {
+            width: 100%;
+            max-width: 255px;
+            height: 275px;
+            border-radius: 0 !important;
+            margin: 0 auto 0.5rem;
+            order: -1;
+        }
+
+    /* --- KONTAK & FORM --- */
+    .contact__inputs {
+        grid-template-columns: 1fr;
+        gap: 0.85rem !important;
+    }
+
+    .contact__form {
+        padding: 1.5rem 1.25rem !important;
+        border-radius: 18px;
+    }
+
+    .contact__content {
+        margin-bottom: 0.85rem !important;
+    }
+
+    .contact__label {
+        margin-bottom: 0.25rem !important;
+        font-size: 0.82rem;
+    }
+
+    .contact__input {
+        padding: 0.75rem 0.9rem !important;
+        border-radius: 12px;
+        font-size: 0.88rem;
+    }
+
+    textarea.contact__input {
+        height: 115px;
+    }
+
+    /* --- FOOTER --- */
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer__social {
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   3. Layar Ponsel Kecil (Max Width: 400px)
+   ========================================== */
+@media screen and (max-width: 400px) {
+    .hero__img-box.slideshow-container {
+        width: 205px;
+        height: 260px;
+    }
+
+    .highlights__container {
+        gap: 0.65rem;
+    }
+
+    .highlight-card {
+        padding: 1rem 0.6rem;
+    }
+
+    .skills__grid-box {
+        gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .skill__item span {
+        font-size: 0.65rem;
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery__img {
+        width: calc(50% - 0.425rem) !important;
+        min-width: unset;
+    }
+
+    .dokumentasi__card .dokumentasi__img {
+        width: 100% !important;
+    }
+        .hero__img-box.slideshow-container {
+            max-width: 225px;
+            height: 245px;
+        }
+}

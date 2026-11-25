@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portofolio Simforianus Jasang Bali, S.Kom - Fresh Graduate Teknik Informatika & Full Stack Web Developer.">
+    <meta name="keywords"
+        content="Front-End Developer, Full Stack Web Developer, Portfolio, React.js, Laravel, CodeIgniter 4, PHP, MySQL">
+    <meta name="author" content="Simforianus Jasang Bali, S.Kom">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Simforianus Jasang Bali, S.Kom | Web Developer Portfolio">
+    <meta property="og:description"
+        content="Portofolio pengembangan aplikasi web, sistem informasi, dan proyek ber-HKI.">
+
+    <title>Simforianus Jasang Bali, S.Kom | Portfolio</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("mUZbKe7BfVOs2UnLR");
+    </script>
+</head>
+
+<body>
+
+    <!-- 1. Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader"></div>
+        <span class="loading-text">Loading...</span>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- 2. Header & Sticky Navigation -->
+    <header id="header" class="header">
+        <nav class="navbar container">
+            <a href="#home" class="nav__logo">Frisabali-Dev<span>💻</span></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Tentang</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Keahlian</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Proyek</a></li>
+                    <li class="nav__item"><a href="#dokumentasi" class="nav__link">Dokumentasi</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Kontak</a></li>
+                </ul>
+                <i class="fa-solid fa-xmark nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__actions">
+                <i class="fa-solid fa-sun dark-toggle" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- 3. Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero__abstract-bg"></div>
+            <div class="hero__container container grid">
+                <div class="hero__data">
+                    <div class="hero__top-badges">
+                        <h2 class="hero__subtitle">Hallo, Saya</h2>
+                        <span class="hero__status"><span class="status-dot"></span> Open to Work</span>
+                    </div>
+                    <h1 class="hero__title">Simforianus Jasang Bali, S.Kom</h1>
+                    <h3 class="hero__profession">
+                        <span class="typing-text"></span><span class="cursor">&nbsp;</span>
+                    </h3>
+                    <p class="hero__description">
+                        Fresh Graduate S1 Teknik Informatika (IPK 3,57) dengan fokus pada Full Stack Web Development dan
+                        Sistem Informasi. Berpengalaman mengembangkan aplikasi web end-to-end menggunakan React.js,
+                        Laravel, CodeIgniter 4, PHP, dan MySQL, mulai dari analisis kebutuhan, desain antarmuka, hingga
+                        implementasi dan pengujian. Memiliki proyek ber-HKI serta siap memberikan solusi digital yang
+                        inovatif dan berkualitas.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="Document/CV WEB DEV SIMFORIANUS JASANG BALI.pdf" class="btn btn--primary ripple" download>
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                        <a href="#projects" class="btn btn--outline ripple">View Projects</a>
+                        <a href="#contact" class="btn btn--text">Contact Me <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hero__social">
+                        <a href="https://github.com/firsabali" target="_blank" aria-label="GitHub"
+                            class="hero__social-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/frysa-baly-461244423" target="_blank" aria-label="LinkedIn"
+                            class="hero__social-link"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/frisabaly?igsh=NHNieGI0enlyN2Yy" target="_blank"
+                            aria-label="Instagram" class="hero__social-link"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            <div class="hero__img-box slideshow-container" style="max-width: 380px; height: 400px;">
+                <img src="images/Gambar-1-removebg-preview.png" alt="Profile Picture 1" class="hero__img slide-img active"
+                    style="scale: 1.35; transform-origin: center 22%;">
+                <img src="images/WhatsApp_Image_2026-11-20_at_12.29.16-removebg-preview.png" alt="Profile Picture 2"
+                    class="hero__img slide-img" style="scale: 1.45; transform-origin: center 22%;">
+                <img src="images/WhatsApp_Image_2026-11-24_at_08.54.20__1_-removebg-preview.png" alt="Profile Picture 3"
+                    class="hero__img slide-img" style="scale: 1.45; transform-origin: center 22%;">
+                <img src="images/WhatsApp_Image_2026-11-24_at_08.54.20__2_-removebg-preview.png" alt="Profile Picture 4"
+                    class="hero__img slide-img" style="scale: 1.45; transform-origin: center 22%;">
+                <img src="images/WhatsApp_Image_2026-11-24_at_08.54.20-removebg-preview.png" alt="Profile Picture 5"
+                    class="hero__img slide-img" style="scale: 1.45; transform-origin: center 22%;">
+                <img src="images/WhatsApp_Image_2026-11-24_at_08.54.21-removebg-preview.png" alt="Profile Picture 6"
+                    class="hero__img slide-img" style="scale: 1.45; transform-origin: center 22%;">
+                <img src="images/WhatsApp_Image_2026-11-24_at_08.54.23-removebg-preview.png" alt="Profile Picture 7"
+                    class="hero__img slide-img" style="scale: 1.45; transform-origin: center 22%;">
+            </div>
+            </div>
+        </section>
+
+        <!-- 4. Highlights / Pencapaian -->
+        <section class="highlights-section section" id="highlights">
+            <div class="container highlights__container">
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h3 class="highlight-number counter" data-target="5">0</h3>
+                        <h4 class="highlight-title">Proyek</h4>
+                        <p class="highlight-desc">Website sistem informasi selesai dibangun</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h3 class="highlight-number counter" data-target="1">0</h3>
+                        <h4 class="highlight-title">HKI</h4>
+                        <p class="highlight-desc">Program komputer terdaftar</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h3 class="highlight-number counter" data-target="10" data-suffix="+">0</h3>
+                        <h4 class="highlight-title">Teknologi</h4>
+                        <p class="highlight-desc">React, Laravel, CI4, MySQL, Tailwind</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h3 class="highlight-number counter" data-target="1">0</h3>
+                        <h4 class="highlight-title">Magang</h4>
+                        <p class="highlight-desc">Administrasi & Data Entry</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. About Section -->
+        <section id="about" class="about section">
+            <h2 class="section__title">Tentang Saya</h2>
+            <span class="section__subtitle">My Introduction</span>
+
+            <div class="about__container container">
+                <div class="about__data">
+                    <p class="about__description" style="text-align: justify; margin-bottom: 2.5rem;">
+                        Saya merupakan Fresh Graduate S1 Teknik Informatika Universitas Dr. Soetomo Surabaya dengan
+                        fokus pada bidang Sistem Informasi dan minat dalam Front-End serta Full Stack Development. Saya
+                        memiliki semangat belajar yang tinggi, adaptif terhadap teknologi baru, serta mampu bekerja
+                        secara individu maupun dalam tim. Saat ini saya terbuka terhadap peluang karier sebagai
+                        Front-End Developer, Web Developer, System Analyst, Programmer, maupun Staff IT untuk memberikan
+                        kontribusi melalui solusi teknologi yang inovatif.
+                    </p>
+
+                    <div class="about__grid-container">
+                        <!-- Kotak 1: Pendidikan & Keahlian -->
+                        <div class="about__card glass-card">
+                            <h3 class="about__card-title"><i class="fa-solid fa-graduation-cap"></i> Pendidikan &
+                                Keahlian</h3>
+                            <div class="about__card-desc">
+                                <p style="margin-bottom: 0.5rem;">
+                                    Saya merupakan Fresh Graduate S1 Teknik Informatika Universitas Dr. Soetomo Surabaya
+                                    dengan fokus pada Full Stack Web Development dan Sistem Informasi. <strong>Lulus
+                                        dalam waktu 3,5 tahun dengan IPK 3,57.</strong> Berpengalaman mengembangkan
+                                    aplikasi web end-to-end menggunakan React.js, Laravel, CodeIgniter 4, PHP, dan
+                                    MySQL, mulai dari analisis kebutuhan, desain antarmuka, hingga implementasi dan
+                                    pengujian. Memiliki proyek Hak Kekayaan Intelektual (HKI) serta siap berkontribusi
+                                    melalui solusi digital yang inovatif dan berkualitas.
+                                </p>
+                                <ul style="list-style-type: disc; padding-left: 1.25rem;">
+                                    <li>Sekretaris Jenderal UKMK St. Paulus Universitas Dr. Soetomo (2023–2024)</li>
+                                    <li>Sekretaris KKN Desa Kamal Kuning, Probolinggo 2025</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Kotak 2: Pengalaman Proyek -->
+                        <div class="about__card glass-card">
+                            <h3 class="about__card-title"><i class="fa-solid fa-laptop-code"></i> Pengalaman Proyek</h3>
+                            <div class="about__card-desc">
+                                <p style="margin-bottom: 1rem;">
+                                    Mengembangkan berbagai aplikasi web secara mandiri, meliputi Sistem Informasi
+                                    Pengelolaan Dana Desa (HKI), CargoFir (Sistem Manajemen Logistik), Personal Web
+                                    Portfolio, serta sistem informasi pendidikan dan kesehatan. Seluruh proyek
+                                    dikerjakan mulai dari analisis kebutuhan, perancangan UI, pengembangan frontend dan
+                                    backend, hingga pengujian aplikasi.
+                                </p>
+                                <p style="margin-bottom: 0.5rem; font-weight: 500; color: var(--text-color);">
+                                    Tanggung Jawab & Keahlian Utama:
+                                </p>
+                                <ul style="list-style-type: disc; padding-left: 1.25rem;">
+                                    <li><strong>Analisis Kebutuhan:</strong> Mengidentifikasi dan menganalisis kebutuhan
+                                        sistem untuk menghasilkan solusi digital yang efisien dan tepat sasaran.</li>
+                                    <li><strong>Perancangan Antarmuka (UI):</strong> Mendesain tampilan website yang
+                                        responsif dan interaktif, termasuk fitur Dark/Light Mode dan optimisasi untuk
+                                        perangkat seluler.</li>
+                                    <li><strong>Pengembangan Website (Full-Stack):</strong> Membangun aplikasi
+                                        menggunakan React.js, Laravel, CodeIgniter 4, PHP, JavaScript, dan MySQL.</li>
+                                    <li><strong>Pengelolaan Database & Pengujian:</strong> Merancang struktur database
+                                        dan melakukan pengujian menyeluruh untuk memastikan fungsionalitas website
+                                        berjalan optimal dan bebas kendala.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Kotak 3: Organisasi & Kepanitiaan -->
+                        <div class="about__card glass-card">
+                            <h3 class="about__card-title"><i class="fa-solid fa-users"></i> Organisasi & Kepanitiaan
+                            </h3>
+                            <div class="about__card-desc">
+                                <p style="margin-bottom: 0.5rem;">
+                                    Menjabat sebagai Sekretaris Jenderal UKMK St. Paulus Universitas Dr. Soetomo selama
+                                    satu periode kepengurusan 2023–2024. Bertanggung jawab dalam administrasi
+                                    organisasi, penyusunan surat, dokumentasi kegiatan, koordinasi rapat, serta
+                                    mendukung pelaksanaan program kerja. Selain itu, saya juga dipercaya membawakan
+                                    materi pada kegiatan MAKAR dan CASLETING UKMK St. Paulus.
+                                </p>
+                                <ul style="list-style-type: disc; padding-left: 1.25rem;">
+                                    <li>Bendahara Kepanitiaan Kongres UKMK St. Paulus 2023</li>
+                                    <li>Sie Acara Kegiatan Catholic Student Leadership Training (CASLETING) 2023</li>
+                                    <li>Sie Transportasi & Akomodasi Kegiatan Mahasiswa Katolik Rekoleksi (MAKAR) 2025
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Kotak 4: Pengalaman Magang -->
+                        <div class="about__card glass-card">
+                            <h3 class="about__card-title"><i class="fa-solid fa-briefcase"></i> Pengalaman Magang</h3>
+                            <p class="about__card-desc">
+                                Magang di PT Sarana Duta Dunia dengan tanggung jawab membantu administrasi perusahaan,
+                                membuat invoice, serta mengelola data menggunakan Google Spreadsheet. Pengalaman ini
+                                meningkatkan ketelitian, kemampuan administrasi, dan profesionalisme dalam bekerja.
+                            </p>
+                        </div>
+
+                        <!-- Kotak 5: Pencapaian -->
+                        <div class="about__card glass-card">
+                            <h3 class="about__card-title"><i class="fa-solid fa-trophy"></i> Pencapaian</h3>
+                            <ul class="about__card-desc" style="list-style-type: disc; padding-left: 1.5rem;">
+                                <li>Hak Kekayaan Intelektual (HKI) Sistem Informasi Pengelolaan Dana Desa Berbasis
+                                    Website.</li>
+                                <li>Menyelesaikan studi S1 Teknik Informatika dalam 3,5 tahun dengan IPK 3,57.</li>
+                                <li>Aktif sebagai Sekretaris Jenderal organisasi kemahasiswaan selama satu periode.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Galeri Sertifikat -->
+                    <div class="about__gallery glass-card">
+                        <h3 class="gallery__title">Penghargaan & Sertifikat</h3>
+                        <div class="gallery__grid">
+                            <img src="images/Gambar-SertifSitasi.png" alt="Sertifikat HKI" class="gallery__img">
+                            <img src="images/Gambar-UKOM.png" alt="Sertifikat Uji Kompetensi" class="gallery__img">
+                            <img src="images/Gambar-Toefl.png" alt="Sertifikat TOEFL" class="gallery__img">
+                            <img src="images/Gambar-SerUKMK.jpeg" alt="Sertifikat UKMK" class="gallery__img">
+                            <img src="images/Gambar-SerDialog.jpeg" alt="Sertifikat Dialog" class="gallery__img">
+                            <img src="images/Sertif-PKKMB.jpeg" alt="Sertifikat PKKMB" class="gallery__img">
+                            <img src="images/Sertif-ORFAK.jpeg" alt="Sertifikat ORFAK" class="gallery__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Skills Section -->
+        <section id="skills" class="skills section">
+            <h2 class="section__title">My Skills</h2>
+            <span class="section__subtitle">Web Developer & Administrasi</span>
+
+            <div class="skills__container container grid">
+                <!-- Hard Skills -->
+                <div class="skills__content glass-card" style="padding: 2rem;">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--text-color);">Hard Skills</h3>
+                    <div class="skills__grid-box">
+                        <div class="skill__item">
+                            <img src="images/Gambar-HTML1.png" alt="HTML5">
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-CSS.png" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-JS.png" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-React.png" alt="React JS">
+                            <span>React</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-PHP.jpg" alt="PHP">
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-PHPCOD4.jpg" alt="CodeIgniter">
+                            <span>CodeIgniter</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-PHPMY.png" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-Fikma.png" alt="Figma">
+                            <span>FIGMA</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-Excel.png" alt="Excel">
+                            <span>EXCEL</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-Word.jpg" alt="Word">
+                            <span>WORD</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-PPT.jpg" alt="PowerPoint">
+                            <span>PPT</span>
+                        </div>
+                        <div class="skill__item">
+                            <img src="images/Gambar-Sht.jpg" alt="Spreadsheet">
+                            <span>SPREADSHEET</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills__content glass-card" style="padding: 2rem;">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--text-color);">Soft Skills</h3>
+                    <div class="skills__grid-box">
+                        <div class="skill__item" style="text-align: center;">
+                            <i class="fa-solid fa-comments"
+                                style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 0.5rem;"></i>
+                            <span style="display: block; font-size: 0.85rem; font-weight: 500;">Public Speaking</span>
+                        </div>
+                        <div class="skill__item" style="text-align: center;">
+                            <i class="fa-solid fa-users"
+                                style="font-size: 2.5rem; color: #10b981; margin-bottom: 0.5rem;"></i>
+                            <span style="display: block; font-size: 0.85rem; font-weight: 500;">Kerja Sama Tim</span>
+                        </div>
+                        <div class="skill__item" style="text-align: center;">
+                            <i class="fa-solid fa-lightbulb"
+                                style="font-size: 2.5rem; color: #eab308; margin-bottom: 0.5rem;"></i>
+                            <span style="display: block; font-size: 0.85rem; font-weight: 500;">Problem Solving</span>
+                        </div>
+                        <div class="skill__item" style="text-align: center;">
+                            <i class="fa-solid fa-magnifying-glass-chart"
+                                style="font-size: 2.5rem; color: #8b5cf6; margin-bottom: 0.5rem;"></i>
+                            <span style="display: block; font-size: 0.85rem; font-weight: 500;">Ketelitian</span>
+                        </div>
+                        <div class="skill__item" style="text-align: center;">
+                            <i class="fa-solid fa-clock"
+                                style="font-size: 2.5rem; color: #f43f5e; margin-bottom: 0.5rem;"></i>
+                            <span style="display: block; font-size: 0.85rem; font-weight: 500;">Manajemen Waktu</span>
+                        </div>
+                        <div class="skill__item" style="text-align: center;">
+                            <i class="fa-solid fa-person-running"
+                                style="font-size: 2.5rem; color: #0ea5e9; margin-bottom: 0.5rem;"></i>
+                            <span style="display: block; font-size: 0.85rem; font-weight: 500;">Adaptabilitas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Projects Section -->
+        <section id="projects" class="projects section">
+            <h2 class="section__title">ProyekKu</h2>
+            <span class="section__subtitle">Karya & Sistem Informasi yang Dikembangkan</span>
+
+            <!-- Filter Kategori Proyek -->
+            <div class="projects__filters">
+                <button type="button" class="projects__item active-project" data-filter="all">Semua</button>
+                <button type="button" class="projects__item" data-filter=".fullstack">Full Stack</button>
+                <button type="button" class="projects__item" data-filter=".frontend">Web & Profil</button>
+            </div>
+
+            <div class="projects__container container grid">
+                <!-- Project 1 -->
+                <article class="projects__card glass-card fullstack">
+                    <a href="https://firsasistem.great-site.net/" target="_blank" class="project__img-link">
+                        <img src="images/Gambar-Web DES.png" alt="Sistem Informasi Dana Desa" class="projects__img"
+                            loading="lazy">
+                    </a>
+                    <div class="projects__content">
+                        <span class="projects__tech">React.js - Vite - Tailwind CSS - Axios - PHP - CodeIgniter 4 -
+                            MySQL</span>
+                        <h3 class="projects__title">Sistem Informasi Pengelolaan Dana Desa Berbasis Website di Desa
+                            Benteng Raja</h3>
+                        <p class="projects__description">Aplikasi full stack untuk transparansi dan pengelolaan dana
+                            desa dengan Role-Based Access Control (Admin, Sekretaris, dan Kepala Desa). Dilengkapi
+                            portal publik sehingga masyarakat dapat mengakses laporan keuangan, musrenbang, profil desa,
+                            dan mengirim aspirasi.</p>
+                        <div class="projects__buttons">
+                            <a href="https://firsasistem.great-site.net/" target="_blank"
+                                class="btn btn--small btn--primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="Document/Sertifikat HKI Simforianus J Bali.pdf" target="_blank"
+                                class="btn btn--small btn--outline">
+                                <i class="fa-solid fa-certificate"></i> Sertifikat HKI
+                            </a>
+                            <a href="https://github.com/firsabali/Sistem-Informasi-Dana-Desa-Berbasis-web"
+                                target="_blank" class="btn btn--small btn--outline">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="projects__card glass-card fullstack">
+                    <div class="project__img-link">
+                        <img src="images/logistikprojek.png" alt="CargoFir Logistik" class="projects__img gallery__img"
+                            loading="lazy">
+                    </div>
+                    <div class="projects__content">
+                        <span class="projects__tech">Laravel 12 - PHP - JavaScript - Tailwind CSS v4 - MySQL</span>
+                        <h3 class="projects__title">Sistem Manajemen Logistik & Operasional (CargoFir)</h3>
+                        <p class="projects__description">Sistem manajemen logistik berbasis web yang mengelola
+                            pelanggan, kurir, armada, transaksi pengiriman, serta nomor resi otomatis. Menyediakan
+                            dashboard operasional dan pelacakan status paket untuk mendukung proses ekspedisi.</p>
+                        <div class="projects__buttons">
+                            <a href="https://github.com/firsabali/projek-logistik" target="_blank"
+                                class="btn btn--small btn--outline">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="projects__card glass-card frontend">
+                    <a href="index.html" target="_blank" class="project__img-link">
+                        <img src="images/OwnerKasir.png" alt="Aplikasi Kasir POS" class="projects__img" loading="lazy">
+                    </a>
+                    <div class="projects__content">
+                        <span class="projects__tech">PHP - Laravel - JavaScript - Tailwind CSS - MySQL</span>
+                        <h3 class="projects__title">ASistem Kasir & Point of Sale (POS) Multi-Role</h3>
+                        <p class="projects__description">Aplikasi kasir berbasis web untuk mengelola transaksi penjualan, stok produk, serta laporan omzet dan estimasi laba
+                        kotor harian. Dilengkapi pembagian hak akses (Pemilik Usaha & Kasir), peringatan stok menipis otomatis, dan cetak struk
+                        transaksi.</p>
+                        <div class="projects__buttons">
+                            <a href="https://github.com/firsabali/Aplikasi-kasir-POS" target="_blank" class="btn btn--small btn--outline">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="projects__card glass-card frontend">
+                    <a href="https://sistempuskesmaspeot.great-site.net" target="_blank" class="project__img-link">
+                        <img src="images/puskesmas.png" alt="Sistem Informasi Puskesmas Peot" class="projects__img"
+                            loading="lazy">
+                    </a>
+                    <div class="projects__content">
+                        <span class="projects__tech">HTML - CSS - Bootstrap - JavaScript</span>
+                        <h3 class="projects__title">Sistem Informasi Puskesmas Peot</h3>
+                        <p class="projects__description">Website sistem informasi Puskesmas sebagai media layanan
+                            kesehatan digital. Menyajikan profil, layanan, jadwal pelayanan, galeri, dan informasi
+                            administrasi dengan desain responsif.</p>
+                        <div class="projects__buttons">
+                            <a href="https://sistempuskesmaspeot.great-site.net" target="_blank"
+                                class="btn btn--small btn--primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/firsabali/WEB-Puskesmas-Peot" target="_blank"
+                                class="btn btn--small btn--outline">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="projects__card glass-card frontend">
+                    <div class="project__img-link">
+                        <img src="images/sd.png" alt="SD Inpres Koro" class="projects__img gallery__img" loading="lazy">
+                    </div>
+                    <div class="projects__content">
+                        <span class="projects__tech">HTML - CSS - JavaScript</span>
+                        <h3 class="projects__title">Sistem Informasi Sekolah Dasar Inpres Koro</h3>
+                        <p class="projects__description">Website profil resmi sekolah yang menyediakan informasi guru,
+                            berita, agenda kegiatan, galeri, dan informasi akademik. Dirancang responsif agar mudah
+                            diakses oleh siswa, orang tua, dan masyarakat.</p>
+                        <div class="projects__buttons">
+                            <a href="https://github.com/firsabali/WEB-SD-Inpres-Koro" target="_blank"
+                                class="btn btn--small btn--outline">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="projects__card glass-card frontend">
+                    <a href="index.html" target="_blank" class="project__img-link">
+                        <img src="images/portoo.png" alt="Personal Developer Portfolio" class="projects__img"
+                            loading="lazy">
+                    </a>
+                    <div class="projects__content">
+                        <span class="projects__tech">HTML - CSS - JavaScript</span>
+                        <h3 class="projects__title">Personal Developer Portfolio</h3>
+                        <p class="projects__description">Website portofolio pribadi sebagai media personal branding
+                            untuk menampilkan profil, keahlian, proyek, dokumentasi, dan kontak. Dilengkapi fitur
+                            Dark/Light Mode serta tampilan responsif di berbagai perangkat.</p>
+                        <div class="projects__buttons">
+                            <a href="https://github.com/firsabali/WEB-Portofolio" target="_blank"
+                                class="btn btn--small btn--outline">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projek 6 -->
+                
+                <article class="projects__card glass-card frontend">
+                    <a href="index.html" target="_blank" class="project__img-link">
+                        <img src="images/tabungan.png" alt="DompetKu" class="projects__img" loading="lazy">
+                    </a>
+                    <div class="projects__content">
+                        <span class="projects__tech">HTML - CSS - JavaScript - PWA - LocalStorage</span>
+                        <h3 class="projects__title">Aplikasi Manajemen Keuangan & Produktivitas DompetKu</h3>
+                        <p class="projects__description">Aplikasi web progresif untuk mencatat pemasukan, pengeluaran, tabungan bulanan, wishlist, serta pelacak kebiasaan
+                        harian. Dilengkapi fitur autentikasi pengguna, penyimpanan data lokal, dan desain mobile-first yang responsif di
+                        berbagai perangkat.</p>
+                        <div class="projects__buttons">
+                            <a href="https://github.com/firsabali/Dompetku" target="_blank" class="btn btn--small btn--outline">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 8. Dokumentasi Kegiatan -->
+        <section id="dokumentasi" class="dokumentasi section">
+            <h2 class="section__title">Dokumentasi Kegiatan</h2>
+            <span class="section__subtitle">Aktivitas & Pencapaian</span>
+
+            <div class="dokumentasi__container container">
+                <div class="dokumentasi__grid">
+                    <div class="dokumentasi__card glass-card">
+                        <img src="images/desa.png" alt="Dokumentasi Pengembangan Website Keuangan Desa"
+                            class="dokumentasi__img gallery__img">
+                        <div class="dokumentasi__info">
+                            <h3 class="dokumentasi__title">Dokumentasi Proses Pembuatan Website Pengelolaan Dana Desa Benteng Raja</h3>
+                            <span class="dokumentasi__date">November 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="dokumentasi__card glass-card">
+                        <img src="images/Kasir0.png" alt="Dokumentasi Pengembangan Aplikasi Kasir/POS"
+                            class="dokumentasi__img gallery__img">
+                        <div class="dokumentasi__info">
+                            <h3 class="dokumentasi__title">Dokumentasi Pembuatan Aplikasi Kasir/POS
+                            </h3>
+                            <span class="dokumentasi__date">Agustus 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="dokumentasi__card glass-card">
+                        <img src="images/Dompetku.png" alt="Pergantian Pengurus"
+                            class="dokumentasi__img gallery__img">
+                        <div class="dokumentasi__info">
+                            <h3 class="dokumentasi__title">Dokumentasi Pembuatan Website Dompetku</h3>
+                            <span class="dokumentasi__date">Agustus 2026</span>
+                        </div>
+                    </div>
+
+                        <div class="dokumentasi__card glass-card">
+                            <img src="images/Porto0.png" alt="Dokumentasi Pengembangan Website Portofolio" class="dokumentasi__img gallery__img">
+                            <div class="dokumentasi__info">
+                                <h3 class="dokumentasi__title">Dokumentasi Pembuatan Website Portofolio</h3>
+                                <span class="dokumentasi__date">Juni 2026</span>
+                            </div>
+                        </div>
+
+                    <div class="dokumentasi__card glass-card">
+                        <img src="images/G4-Magang.jpeg" alt="Dokumentasi Magang" class="dokumentasi__img gallery__img">
+                        <div class="dokumentasi__info">
+                            <h3 class="dokumentasi__title">Proses Pembuatan Invoice dan Input Data Keuangan di Lokasi
+                                Magang</h3>
+                            <span class="dokumentasi__date">05 Mei 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="dokumentasi__card glass-card">
+                        <img src="images/G3-Matericas2.jpeg" alt="Pemateri Kepemimpinan"
+                            class="dokumentasi__img gallery__img">
+                        <div class="dokumentasi__info">
+                            <h3 class="dokumentasi__title">Membawakan Materi Kepemimpinan dalam Kegiatan Catholic
+                                Student Leadership Training (CASLETING) 2025</h3>
+                            <span class="dokumentasi__date">21 Juni 2025</span>
+                        </div>
+                    </div>
+
+
+                    <div class="dokumentasi__card glass-card">
+                        <img src="images/kkn.jpeg" alt="Kegiatan KKN" class="dokumentasi__img gallery__img">
+                        <div class="dokumentasi__info">
+                            <h3 class="dokumentasi__title">Kegiatan Kuliah Kerja Nyata Desa Kamal Kuning, Probolinggo,
+                                Jawa Timur</h3>
+                            <span class="dokumentasi__date">Agustus 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="dokumentasi__card glass-card">
+                        <img src="images/dua.jpeg" alt="Demo UKM" class="dokumentasi__img gallery__img">
+                        <div class="dokumentasi__info">
+                            <h3 class="dokumentasi__title">Demo UKM Katolik di Depan Seluruh Mahasiswa Baru Universitas
+                                Dr. Soetomo</h3>
+                            <span class="dokumentasi__date">27 Agustus 2025</span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Contact Section -->
+        <section id="contact" class="contact section">
+            <h2 class="section__title">Kontak</h2>
+            <span class="section__subtitle">Hubungi Saya</span>
+
+            <!-- Kartu Kontak Cepat -->
+            <div class="contact__quick container">
+                <a href="https://wa.me/6281236856713?text=Halo%20Simforianus,%20saya%20tertarik%20dengan%20portofolio%20Anda."
+                    target="_blank" class="contact__quick-card glass-card">
+                    <i class="fa-brands fa-whatsapp" style="color: #10b981;"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <span>Chat Langsung</span>
+                    </div>
+                </a>
+
+                <button type="button" id="copy-email-btn" data-email="balisimforianusj@gmail.com"
+                    class="contact__quick-card glass-card">
+                    <i class="fa-solid fa-envelope" style="color: var(--primary-color);"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <span id="copy-email-text">Salin Alamat Email</span>
+                    </div>
+                </button>
+
+                <div class="contact__quick-card glass-card">
+                    <i class="fa-solid fa-location-dot" style="color: #f43f5e;"></i>
+                    <div>
+                        <h4>Domisili</h4>
+                        <span>Surabaya, Jawa Timur</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__container container grid">
+                <form action="" class="contact__form glass-card" id="contact-form">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="name" class="contact__label">Name</label>
+                            <input type="text" id="name" name="from_name" class="contact__input" autocomplete="name"
+                                required>
+                            <span class="error-text" id="name-error"></span>
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="email" class="contact__label">Email</label>
+                            <input type="email" id="email" name="from_email" class="contact__input" autocomplete="email"
+                                required>
+                            <span class="error-text" id="email-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="contact__content">
+                        <label for="subject" class="contact__label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="contact__input" required>
+                        <span class="error-text" id="subject-error"></span>
+                    </div>
+
+                    <div class="contact__content">
+                        <label for="message" class="contact__label">Message</label>
+                        <textarea id="message" name="message" cols="30" rows="7" class="contact__input"
+                            required></textarea>
+                        <span class="error-text" id="message-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary ripple">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                    <p class="form-message" id="form-message"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Frisabali-Dev<span>.</span></a>
+                <p class="footer__description">Membangun web yang modern dan responsif.</p>
+                <div class="footer__social">
+                    <a href="https://github.com/firsabali" target="_blank" class="footer__social-link"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/frysa-baly-461244423" target="_blank"
+                        class="footer__social-link"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Quick Links</h3>
+                <ul class="footer__links">
+                    <li><a href="#about" class="footer__link">Tentang</a></li>
+                    <li><a href="#skills" class="footer__link">Keahlian</a></li>
+                    <li><a href="#projects" class="footer__link">Proyek</a></li>
+                    <li><a href="#dokumentasi" class="footer__link">Dokumentasi</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copy">&#169; 2026 Simforianus Jasang Bali. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- JS Files -->
+    <script src="js/typing.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Modal / Lightbox untuk Galeri Sertifikat -->
+    <div id="image-modal" class="modal">
+        <span class="modal__close">&times;</span>
+        <img class="modal__content" id="modal-img">
+    </div>
+</body>
+
+</html>
